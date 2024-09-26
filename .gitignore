@@ -1,0 +1,9 @@
+*.exe
+build/
+ly-build/
+.vscode/
+.vs/
+Demos/x64/
+x64/
+*.filters
+*.user
