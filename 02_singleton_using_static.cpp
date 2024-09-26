@@ -21,12 +21,29 @@ class Singleton
 };
 int Singleton :: init_counter = 100;
 
+class MyClass {
+    static void* operator new (size_t size) {
+        // Custom allocation logic goes here
+        return ::new MyClass();
+    }
+
+    static void operator delete (void* ptr) {
+        // Custom deallocation logic goes here
+        ::delete ptr;
+    }
+public:
+
+    ~MyClass() {
+        // Destructor code goes here
+    }
+};
+
 int main()
 {
+    //MyClass * p = new MyClass;
+
     Singleton& obj1 = Singleton::instance();
     Singleton& obj2 = Singleton::instance();
-
-
 
     if (&obj1 == &obj2){
         std::cout << "\nOnly one instance was created!";

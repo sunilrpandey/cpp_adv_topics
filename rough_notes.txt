@@ -1,0 +1,2 @@
+while overloading new/delete it has to be static. it is static even if you dont write it
+They are used to allocate memory for an object that does not yet exist hence there is no instance to refer to
