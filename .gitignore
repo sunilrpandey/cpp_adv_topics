@@ -7,3 +7,4 @@ Demos/x64/
 x64/
 *.filters
 *.user
+*.out
